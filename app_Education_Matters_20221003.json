@@ -1,7 +1,6 @@
 {
    "abVersion": "0.0.0",
-   "filename": "app_Education_Matters_20221003",
-   "date": "20221003",
+
    "definitions": [
       {
          "id": "ab7ab867-549a-498f-a1ff-a9e2f97dd525",
@@ -1354,7 +1353,7 @@
                },
                {
                   "language_code": "th",
-                  "label": "หมดหมู่"
+                  "label": "หมวดหมู่"
                }
             ]
          },
@@ -1579,7 +1578,7 @@
                },
                {
                   "language_code": "th",
-                  "label": "เยาวชนตามที่อยู่จังหวัด"
+                  "label": "เยาวชนตามจังหวัดที่อยู่"
                }
             ],
             "fieldIDs": [
@@ -1909,7 +1908,7 @@
                         },
                         {
                            "language_code": "th",
-                           "text": "กาฐจนบุรี"
+                           "text": "กาญจนบุรี"
                         }
                      ]
                   },
@@ -3511,7 +3510,8 @@
                "428eec50-8cf2-46d4-8baf-05fe7763e011",
                "3bc2526d-1186-48d5-a3ed-7ed7d5ecb29f",
                "17ca84f7-32ff-42ad-8981-23b50620fc68",
-               "dc38ac6a-d45e-463b-ba27-37d31be74aec"
+               "dc38ac6a-d45e-463b-ba27-37d31be74aec",
+               "ec3bb1f1-52b3-4e21-8a85-433df92809e0"
             ],
             "createdInAppID": "ab7ab867-549a-498f-a1ff-a9e2f97dd525",
             "objectWorkspaceViews": {
@@ -3704,6 +3704,36 @@
          },
          "createdAt": "2021-02-17T04:40:48.000Z",
          "updatedAt": "2021-09-13T07:58:46.000Z"
+      },
+      {
+         "name": "EM-Donation->Notes",
+         "type": "field",
+         "json": {
+            "type": "field",
+            "key": "string",
+            "icon": "font",
+            "isImported": "0",
+            "columnName": "Notes",
+            "settings": {
+               "showIcon": 1,
+               "required": 0,
+               "unique": 0,
+               "validationRules": "[]",
+               "default": "",
+               "supportMultilingual": 0,
+               "width": 100
+            },
+            "translations": [
+               {
+                  "language_code": "en",
+                  "label": "Notes"
+               }
+            ],
+            "id": "ec3bb1f1-52b3-4e21-8a85-433df92809e0"
+         },
+         "id": "ec3bb1f1-52b3-4e21-8a85-433df92809e0",
+         "createdAt": "2022-10-20T10:07:37.144Z",
+         "updatedAt": "2022-10-20T10:07:37.144Z"
       },
       {
          "id": "dcf4cc70-be20-4ff6-8be6-b3447feafb29",
@@ -6109,7 +6139,7 @@
                },
                {
                   "language_code": "th",
-                  "label": "4B. การได้รับบริการด้านสุขภาพ (การรักษาขภาพ)"
+                  "label": "4B. การได้รับบริการด้านสุขภาพ (การรักษาสุขภาพ)"
                }
             ]
          },
@@ -8699,6 +8729,7 @@
          "name": "Add Donation",
          "type": "datacollection",
          "json": {
+            "id": "4943674e-5319-43ef-b472-c3350de3b14a",
             "name": "Add Donation",
             "type": "datacollection",
             "settings": {
@@ -8706,9 +8737,14 @@
                "linkFieldID": "",
                "objectWorkspace": {
                   "filterConditions": {
-                     "glue": "and",
-                     "rules": []
-                  }
+                     "glue": "and"
+                  },
+                  "sortFields": [
+                     {
+                        "key": "",
+                        "dir": ""
+                     }
+                  ]
                },
                "loadAll": "false",
                "isQuery": "false",
@@ -9298,7 +9334,7 @@
                               }
                            ]
                         },
-                        "updateObjectURL": "#/_objects/f3e7acfb-f225-4c34-9c7c-72887767e7d4/_fields/ed19aa55-4fe1-4be0-93a2-c4b1fb737641"
+                        "updateObjectURL": "#/_objects/f3e7acfb-f225-4c34-9c7c-72887767e7d4"
                      }
                   },
                   {
@@ -12292,7 +12328,7 @@
                },
                {
                   "language_code": "th",
-                  "label": "การเดินทางด้านจิตวิญ"
+                  "label": "การเดินทางด้านจิตวิญญาณ"
                }
             ],
             "viewIDs": [
@@ -21343,9 +21379,10 @@
                }
             ],
             "viewIDs": [
-               "77b37233-fa05-46b8-8d4b-df95a4a580ee",
                "ceea1d8b-bc96-46d9-a3c4-8c4dd857d828",
                "6d55f380-d775-4761-8c0b-d1c4f9171f3e",
+               "1b8a9fe7-0c43-4d37-afa8-e2e12e03a0c8",
+               "3f06cea8-9db7-4d44-a4eb-977f9e0a8006",
                "1b997d52-3989-402a-9c4a-02602fab394d"
             ],
             "position": {
@@ -21459,7 +21496,69 @@
             "isRoot": "false"
          },
          "createdAt": "2021-02-19T05:54:38.000Z",
-         "updatedAt": "2021-06-04T04:44:37.000Z"
+         "updatedAt": "2022-10-20T10:05:59.000Z"
+      },
+      {
+         "name": "Enter Donation.form.connect",
+         "type": "view",
+         "json": {
+            "type": "view",
+            "key": "connect",
+            "icon": "list-ul",
+            "settings": {
+               "objectId": "4d93366b-5698-4eb9-bf45-b14a3f3061cd",
+               "fieldId": "dc38ac6a-d45e-463b-ba27-37d31be74aec",
+               "objectWorkspace": {
+                  "filterConditions": {
+                     "glue": "and"
+                  }
+               }
+            },
+            "translations": [
+               {
+                  "language_code": "en",
+                  "label": "Enter Donation.form.connect"
+               }
+            ],
+            "position": {
+               "dx": 1,
+               "dy": 1
+            },
+            "isRoot": "false",
+            "id": "1b8a9fe7-0c43-4d37-afa8-e2e12e03a0c8"
+         },
+         "id": "1b8a9fe7-0c43-4d37-afa8-e2e12e03a0c8",
+         "createdAt": "2022-10-20T10:06:05.354Z",
+         "updatedAt": "2022-10-20T10:06:05.354Z"
+      },
+      {
+         "name": "Enter Donation.form.textbox",
+         "type": "view",
+         "json": {
+            "type": "view",
+            "key": "textbox",
+            "icon": "i-cursor",
+            "settings": {
+               "type": "single",
+               "objectId": "4d93366b-5698-4eb9-bf45-b14a3f3061cd",
+               "fieldId": "ec3bb1f1-52b3-4e21-8a85-433df92809e0"
+            },
+            "translations": [
+               {
+                  "language_code": "en",
+                  "label": "Enter Donation.form.textbox"
+               }
+            ],
+            "position": {
+               "dx": 1,
+               "dy": 1
+            },
+            "isRoot": "false",
+            "id": "3f06cea8-9db7-4d44-a4eb-977f9e0a8006"
+         },
+         "id": "3f06cea8-9db7-4d44-a4eb-977f9e0a8006",
+         "createdAt": "2022-10-20T10:09:05.189Z",
+         "updatedAt": "2022-10-20T10:09:05.189Z"
       },
       {
          "id": "1b997d52-3989-402a-9c4a-02602fab394d",
@@ -21487,7 +21586,7 @@
             "position": {
                "dx": 1,
                "dy": 1,
-               "y": 3,
+               "y": 5,
                "x": 0
             },
             "isRoot": "false"
@@ -21601,390 +21700,6 @@
          },
          "createdAt": "2021-04-26T07:57:41.000Z",
          "updatedAt": "2021-06-04T04:44:37.000Z"
-      }
-   ],
-   "siteObjectConnections": {},
-   "roles": [
-      {
-         "uuid": "01833a6b-9e31-430d-b87c-33a95a5d17dd",
-         "created_at": "2022-10-03T05:22:07.000Z",
-         "updated_at": "2022-10-03T05:22:07.000Z",
-         "properties": null,
-         "translations": [
-            {
-               "language_code": "en",
-               "name": "Well Intake",
-               "description": "Well Intake Cordinator"
-            }
-         ],
-         "Default Role": 0,
-         "users__relation": [],
-         "ProcessForm30__relation": [],
-         "scopes": [
-            {
-               "uuid": "d9a85467-d91f-484f-a375-4cc9797b9b61",
-               "created_at": "2022-10-03T05:22:07.000Z",
-               "updated_at": "2022-10-03T05:22:07.000Z",
-               "properties": null,
-               "translations": [
-                  {
-                     "language_code": "en",
-                     "name": "Well Full Access",
-                     "description": "All well objects"
-                  }
-               ],
-               "objectIds": [
-                  "0f84aa8f-248b-4393-9cc8-6473b240da53",
-                  "1478ccbf-8c9d-4c2a-bb5f-000b679601be",
-                  "1fdaa153-e61b-4e2b-b266-836820af2148",
-                  "21c32a39-335f-473e-8ce9-395d265b7a6a",
-                  "4a43ff1d-bbee-4d14-a4b4-a82c57c55b78",
-                  "5e52bcdd-47da-4f08-8a52-8471deeef371",
-                  "7ecd7257-1023-4917-bc3f-88061293cf30",
-                  "83eea47f-01c2-426f-b03a-81f918190c10",
-                  "86fee2de-2ea4-463d-8d13-f27f13fc17dc",
-                  "9050ca81-7fc9-4618-ae27-6d42dcbac4af",
-                  "952aab4c-a1ad-4abf-901d-fcf3fbc8e3ca",
-                  "aa78a230-97aa-44c9-a8e1-34c307c6af09",
-                  "d4ac6bf0-4fbb-4ca8-8a6d-0ef666efba32",
-                  "d6b8ae02-92bc-474c-8309-8503ec025cbf",
-                  "df928244-0f7a-41d3-8bdb-0d145aa23ce3",
-                  "e0b580b7-6cc2-470e-9d2b-e71b312c6abb",
-                  "e0db025e-0063-4789-bc8d-cc8cc98997f7",
-                  "ee4a5b53-e05b-4a8e-ad95-f18327c0590b"
-               ],
-               "Filters": null,
-               "allowAll": 0,
-               "createdBy": null
-            }
-         ],
-         "users": [],
-         "ProcessForm30": [],
-         "name": "Well Intake",
-         "description": "Well Intake Cordinator"
-      },
-      {
-         "uuid": "0462f972-1451-4f04-b495-025b9463cef5",
-         "created_at": "2022-10-03T05:22:07.000Z",
-         "updated_at": "2022-10-03T05:22:07.000Z",
-         "properties": null,
-         "translations": [
-            {
-               "language_code": "en",
-               "name": "Well Provider",
-               "description": "Well Provider - see only their cases/clients"
-            }
-         ],
-         "Default Role": 0,
-         "users__relation": [],
-         "ProcessForm30__relation": [],
-         "scopes": [
-            {
-               "uuid": "a1f4cb6b-7d74-4335-a263-8d617149393d",
-               "created_at": "2022-10-03T05:22:07.000Z",
-               "updated_at": "2022-10-03T05:22:07.000Z",
-               "properties": null,
-               "translations": [
-                  {
-                     "language_code": "en",
-                     "name": "Well Provider",
-                     "description": "Sees only their clients"
-                  }
-               ],
-               "objectIds": [
-                  "1478ccbf-8c9d-4c2a-bb5f-000b679601be",
-                  "1fdaa153-e61b-4e2b-b266-836820af2148",
-                  "21c32a39-335f-473e-8ce9-395d265b7a6a",
-                  "4a43ff1d-bbee-4d14-a4b4-a82c57c55b78",
-                  "5e52bcdd-47da-4f08-8a52-8471deeef371",
-                  "7ecd7257-1023-4917-bc3f-88061293cf30",
-                  "83eea47f-01c2-426f-b03a-81f918190c10",
-                  "86fee2de-2ea4-463d-8d13-f27f13fc17dc",
-                  "9050ca81-7fc9-4618-ae27-6d42dcbac4af",
-                  "952aab4c-a1ad-4abf-901d-fcf3fbc8e3ca",
-                  "aa78a230-97aa-44c9-a8e1-34c307c6af09",
-                  "d4ac6bf0-4fbb-4ca8-8a6d-0ef666efba32",
-                  "d6b8ae02-92bc-474c-8309-8503ec025cbf",
-                  "df928244-0f7a-41d3-8bdb-0d145aa23ce3",
-                  "e0db025e-0063-4789-bc8d-cc8cc98997f7",
-                  "ee4a5b53-e05b-4a8e-ad95-f18327c0590b"
-               ],
-               "Filters": {
-                  "glue": "and",
-                  "rules": [
-                     {
-                        "key": "f2bece48-2cb7-448a-b96b-f85700805511",
-                        "rule": "in_query",
-                        "value": "c91f2845-0c5f-4f6d-ad19-aafb71dc9fdf"
-                     },
-                     {
-                        "key": "dedf518d-a239-4637-9e1a-0f915d2cb01f",
-                        "rule": "in_query",
-                        "value": "ba56e4be-c26b-4254-9747-573e0df55408"
-                     },
-                     {
-                        "key": "92374215-e4fe-461d-93f0-8803061259b1",
-                        "rule": "in_query",
-                        "value": "c91f2845-0c5f-4f6d-ad19-aafb71dc9fdf"
-                     }
-                  ]
-               },
-               "allowAll": 0,
-               "createdBy": null
-            }
-         ],
-         "users": [],
-         "ProcessForm30": [],
-         "name": "Well Provider",
-         "description": "Well Provider - see only their cases/clients"
-      },
-      {
-         "uuid": "4cb11fa7-3d79-412c-9a03-0ce8d7210cde",
-         "created_at": "2022-10-03T05:18:14.000Z",
-         "updated_at": "2022-10-03T05:18:14.000Z",
-         "properties": null,
-         "translations": [
-            {
-               "language_code": "en",
-               "name": "test-kcs-scoped-role",
-               "description": "Test role with scope for Kitchensink App"
-            }
-         ],
-         "Default Role": 0,
-         "users__relation": [],
-         "ProcessForm30__relation": [],
-         "scopes": [
-            {
-               "uuid": "6fc24a82-01f6-4fb4-b45b-e734ecb8e87e",
-               "created_at": "2022-10-03T05:18:14.000Z",
-               "updated_at": "2022-10-03T05:18:14.000Z",
-               "properties": null,
-               "translations": [
-                  {
-                     "language_code": "en",
-                     "name": "test-kcs-scope",
-                     "description": "Restricted scope on test-kcs-scoped-data object"
-                  }
-               ],
-               "objectIds": [
-                  "01e0c6d4-ab5e-41ca-8715-77f0424e623f",
-                  "3f4f9295-4ad6-4279-9789-5c6c175852df",
-                  "5e576b80-0bd5-4bf1-90e4-c4f652c75f98",
-                  "68200b3f-7ce9-4569-8f58-5fe255f8da53",
-                  "72a93a34-ccc6-46ec-bd1a-118b490e7e1a",
-                  "80ccd9b6-ba26-4e63-9fc9-d37d3df60d68",
-                  "bd4243a8-7c19-4dc0-ad27-1a3b56960bb4",
-                  "c83bc5d5-41af-4307-85c9-852950efbd15",
-                  "dc5b5648-73f6-4ffa-b131-f9b998793ae8",
-                  "efdf6230-2013-459c-9c0e-a8c25521f31a"
-               ],
-               "Filters": {
-                  "glue": "and",
-                  "rules": [
-                     {
-                        "key": "d8eccd82-530a-466d-8b09-51725ab9a964",
-                        "rule": "equals",
-                        "value": "A"
-                     }
-                  ]
-               },
-               "allowAll": 0,
-               "createdBy": null
-            }
-         ],
-         "users": [],
-         "ProcessForm30": [],
-         "name": "test-kcs-scoped-role",
-         "description": "Test role with scope for Kitchensink App"
-      },
-      {
-         "uuid": "c241ba65-f65a-44db-888a-b4f13593f47e",
-         "created_at": "2022-10-03T05:22:07.000Z",
-         "updated_at": "2022-10-03T05:22:07.000Z",
-         "properties": null,
-         "translations": [
-            {
-               "language_code": "en",
-               "name": "Well Finance",
-               "description": "All Clients - Only Finance Pages"
-            }
-         ],
-         "Default Role": 0,
-         "users__relation": [],
-         "ProcessForm30__relation": [],
-         "scopes": [
-            {
-               "uuid": "607598f0-98d0-4e28-b73a-be1e083df030",
-               "created_at": "2022-10-03T05:22:07.000Z",
-               "updated_at": "2022-10-03T05:22:07.000Z",
-               "properties": null,
-               "translations": [
-                  {
-                     "language_code": "en",
-                     "name": "Well Finance",
-                     "description": "Needs most objects"
-                  }
-               ],
-               "objectIds": [
-                  "4a43ff1d-bbee-4d14-a4b4-a82c57c55b78",
-                  "5e52bcdd-47da-4f08-8a52-8471deeef371",
-                  "7ecd7257-1023-4917-bc3f-88061293cf30",
-                  "83eea47f-01c2-426f-b03a-81f918190c10",
-                  "86fee2de-2ea4-463d-8d13-f27f13fc17dc",
-                  "9050ca81-7fc9-4618-ae27-6d42dcbac4af",
-                  "aa78a230-97aa-44c9-a8e1-34c307c6af09",
-                  "d4ac6bf0-4fbb-4ca8-8a6d-0ef666efba32",
-                  "d6b8ae02-92bc-474c-8309-8503ec025cbf",
-                  "df928244-0f7a-41d3-8bdb-0d145aa23ce3",
-                  "e0db025e-0063-4789-bc8d-cc8cc98997f7"
-               ],
-               "Filters": null,
-               "allowAll": 0,
-               "createdBy": null
-            }
-         ],
-         "users": [],
-         "ProcessForm30": [],
-         "name": "Well Finance",
-         "description": "All Clients - Only Finance Pages"
-      },
-      {
-         "uuid": "c9093730-0176-4f72-b410-bfb6856ff713",
-         "created_at": "2022-10-03T05:18:14.000Z",
-         "updated_at": "2022-10-03T05:18:14.000Z",
-         "properties": null,
-         "translations": [
-            {
-               "language_code": "en",
-               "name": "test-kcs-fa-scope-role",
-               "description": "Full Access Scope for Kitchensink App"
-            }
-         ],
-         "Default Role": 0,
-         "users__relation": [],
-         "ProcessForm30__relation": [],
-         "scopes": [
-            {
-               "uuid": "7d54e52e-65e6-4da7-8faa-26aed0c1160e",
-               "created_at": "2022-10-03T05:18:14.000Z",
-               "updated_at": "2022-10-03T05:18:14.000Z",
-               "properties": null,
-               "translations": [
-                  {
-                     "language_code": "en",
-                     "name": "test-kcs-fa",
-                     "description": "Full Access Scope for Kitchensink App Objects"
-                  }
-               ],
-               "objectIds": [
-                  "01e0c6d4-ab5e-41ca-8715-77f0424e623f",
-                  "3f4f9295-4ad6-4279-9789-5c6c175852df",
-                  "5e576b80-0bd5-4bf1-90e4-c4f652c75f98",
-                  "68200b3f-7ce9-4569-8f58-5fe255f8da53",
-                  "72a93a34-ccc6-46ec-bd1a-118b490e7e1a",
-                  "80ccd9b6-ba26-4e63-9fc9-d37d3df60d68",
-                  "bd4243a8-7c19-4dc0-ad27-1a3b56960bb4",
-                  "c83bc5d5-41af-4307-85c9-852950efbd15",
-                  "dc5b5648-73f6-4ffa-b131-f9b998793ae8",
-                  "efdf6230-2013-459c-9c0e-a8c25521f31a"
-               ],
-               "Filters": null,
-               "allowAll": 0,
-               "createdBy": null
-            }
-         ],
-         "users": [],
-         "ProcessForm30": [],
-         "name": "test-kcs-fa-scope-role",
-         "description": "Full Access Scope for Kitchensink App"
-      },
-      {
-         "uuid": "eb4f75ea-c995-4fc6-8bab-0ab2d6552508",
-         "created_at": "2022-10-03T05:18:14.000Z",
-         "updated_at": "2022-10-03T05:18:14.000Z",
-         "properties": null,
-         "translations": [
-            {
-               "language_code": "en",
-               "name": "test-kcs-restricted-role",
-               "description": "No acces to the test-kcs-scoped-data"
-            }
-         ],
-         "Default Role": 0,
-         "users__relation": [],
-         "ProcessForm30__relation": [],
-         "scopes": [
-            {
-               "uuid": "506a6815-0073-436e-9e2a-b5bc6b655b8a",
-               "created_at": "2022-10-03T05:18:14.000Z",
-               "updated_at": "2022-10-03T05:18:14.000Z",
-               "properties": null,
-               "translations": [
-                  {
-                     "language_code": "en",
-                     "name": "test-kcs-restricted-scope",
-                     "description": "No acces to the test-kcs-scoped-data"
-                  }
-               ],
-               "objectIds": [
-                  "01e0c6d4-ab5e-41ca-8715-77f0424e623f",
-                  "3f4f9295-4ad6-4279-9789-5c6c175852df",
-                  "5e576b80-0bd5-4bf1-90e4-c4f652c75f98",
-                  "68200b3f-7ce9-4569-8f58-5fe255f8da53",
-                  "80ccd9b6-ba26-4e63-9fc9-d37d3df60d68",
-                  "bd4243a8-7c19-4dc0-ad27-1a3b56960bb4",
-                  "c83bc5d5-41af-4307-85c9-852950efbd15",
-                  "dc5b5648-73f6-4ffa-b131-f9b998793ae8",
-                  "efdf6230-2013-459c-9c0e-a8c25521f31a"
-               ],
-               "Filters": null,
-               "allowAll": 0,
-               "createdBy": null
-            }
-         ],
-         "users": [],
-         "ProcessForm30": [],
-         "name": "test-kcs-restricted-role",
-         "description": "No acces to the test-kcs-scoped-data"
-      },
-      {
-         "uuid": "ee52974b-5276-427f-ad4c-f29af6b5caaf",
-         "created_at": "2022-04-07T09:43:20.000Z",
-         "updated_at": "2022-04-07T09:43:20.000Z",
-         "properties": null,
-         "translations": [
-            {
-               "language_code": "en",
-               "description": "Likes to tell tenants what to do.",
-               "name": "Tenant Admin"
-            }
-         ],
-         "Default Role": 1,
-         "users__relation": [],
-         "ProcessForm30__relation": [],
-         "scopes": [
-            {
-               "uuid": "838beeb9-0a13-4b0f-9780-0d47e67f3752",
-               "created_at": "2020-05-13T09:49:53.000Z",
-               "updated_at": null,
-               "properties": null,
-               "translations": [
-                  {
-                     "language_code": "en",
-                     "name": "All Access",
-                     "description": "Provide Full Data Access to All Objects."
-                  }
-               ],
-               "objectIds": null,
-               "Filters": null,
-               "allowAll": 1,
-               "createdBy": null
-            }
-         ],
-         "users": [],
-         "ProcessForm30": [],
-         "name": "Tenant Admin",
-         "description": "Likes to tell tenants what to do."
       }
    ]
 }
