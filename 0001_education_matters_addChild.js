@@ -1,16 +1,8 @@
 const Common = require("../../../../setup/common.js");
 
 const folderName = __dirname.match(/[^\\/]+$/);
+
 Cypress.on("uncaught:exception", () => false);
-Cypress.on("uncaught:exception", (err) => {
-   if (
-      err.message.includes(
-         "TypeError: Cannot read properties of undefined (reading 'raw')"
-      )
-   ) {
-      return false;
-   }
-});
 
 before(() => {
    Common.ResetDB(cy);
@@ -32,7 +24,7 @@ beforeEach(() => {
 });
 
 describe("Adding Child", () => {
-   it.only("Can Add New Child", () => {
+   it("Can Add New Child", () => {
       cy.get(
          "[data-cy='menu-item Add Child 04e92328-43c4-4f9b-ba57-b71c71db9570 41cee2d7-e3f8-4837-bfc2-084efe2a3883']"
       )
@@ -69,4 +61,4 @@ describe("Adding Child", () => {
          "[data-cy='button save ed19aa55-4fe1-4be0-93a2-c4b1fb737641']"
       ).click();
    });
-}); //End Describe
+});
