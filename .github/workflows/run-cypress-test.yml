@@ -54,9 +54,3 @@ jobs:
            if: failure()
            with:
              name: cypress-screenshots
-             path: ./ab/test/e2e/cypress/screenshots
-         - uses: actions/upload-artifact@v3
-           if: failure()
-           with:
-             name: ABServices.log
-             path: ./ab/logs/ABServices.log
