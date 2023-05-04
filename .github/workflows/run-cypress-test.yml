@@ -28,7 +28,7 @@ jobs:
            working-directory: ./ab
 
          - name: Check out
-           uses: actions/checkout@v2
+           uses: actions/checkout@v3
            with:
               path: ab/test/e2e/cypress/integration/education_matters
 
@@ -50,7 +50,7 @@ jobs:
               # the test reset script.
               env: stack=ab
 
-         - uses: actions/upload-artifact@v2
+         - uses: actions/upload-artifact@v3
            if: failure()
            with:
               name: cypress-screenshots
