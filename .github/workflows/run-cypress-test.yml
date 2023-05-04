@@ -30,11 +30,11 @@ jobs:
          - name: Check out
            uses: actions/checkout@v3
            with:
-              path: ab/test/e2e/cypress/integration/education_matters
+              path: ab/test/e2e/cypress/e2e/education_matters
 
          #Run test
          - name: Run Cypress Tests
-           uses: cypress-io/github-action@v2
+           uses: cypress-io/github-action@v5
            with:
               working-directory: ./ab
               project: ./test/e2e
