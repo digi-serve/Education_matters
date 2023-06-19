@@ -1,7 +1,7 @@
 {
 	"abVersion": "0.0.0",
-	"filename": "app_Education_Matters_20230615",
-	"date": "20230615",
+	"filename": "app_Education_Matters_20230619",
+	"date": "20230619",
 	"definitions": [{
 		"id": "ab7ab867-549a-498f-a1ff-a9e2f97dd525",
 		"name": "Education Matters",
@@ -38,7 +38,7 @@
 							"version": "1.0.0",
 							"keepVersion": 0,
 							"commitMessage": "Initial Version",
-							"timestamp": "2023-06-15T09:48:18.441Z"
+							"timestamp": "2023-06-19T08:16:54.712Z"
 						}
 					}
 				}
@@ -19486,11 +19486,12 @@
 			"tabicon": "child",
 			"name": "Children",
 			"settings": {
-				"columns": "1",
-				"removable": "true",
-				"movable": "true",
+				"columns": 1,
+				"removable": true,
+				"movable": true,
 				"height": 0
 			},
+			"accessLevels": {},
 			"translations": [{
 				"language_code": "en",
 				"label": "Children"
@@ -19498,15 +19499,15 @@
 				"language_code": "th",
 				"label": "เยาวชน"
 			}],
-			"viewIDs": ["696ef09b-b824-499e-8e8c-d52ae97dd0ab", "6c757512-9a9b-46d5-98f6-61f26afcde44"],
+			"viewIDs": ["696ef09b-b824-499e-8e8c-d52ae97dd0ab", "6c757512-9a9b-46d5-98f6-61f26afcde44", "48ab61fc-b011-4ab4-ba0a-e3c811e59c88"],
 			"position": {
 				"dx": 1,
 				"dy": 1
 			},
-			"isRoot": "false"
+			"isRoot": false
 		},
 		"createdAt": "2020-12-10T01:14:34.000Z",
-		"updatedAt": "2021-09-13T09:38:16.000Z"
+		"updatedAt": "2023-06-19T08:16:44.000Z"
 	}, {
 		"id": "696ef09b-b824-499e-8e8c-d52ae97dd0ab",
 		"name": "Children.dataview",
@@ -19543,12 +19544,12 @@
 				"dx": 1,
 				"dy": 1,
 				"x": 0,
-				"y": 1
+				"y": 2
 			},
 			"isRoot": false
 		},
 		"createdAt": "2020-12-22T02:26:35.000Z",
-		"updatedAt": "2023-06-14T04:57:09.000Z"
+		"updatedAt": "2023-06-19T08:16:44.000Z"
 	}, {
 		"id": "7ce3fce9-6d7e-4fc0-9b06-a2f90c830dfb",
 		"name": "Children.dataview.text",
@@ -19597,8 +19598,8 @@
 			"icon": "th-large",
 			"name": "Children.menu",
 			"settings": {
-				"columnSpan": "1",
-				"rowSpan": "1",
+				"columnSpan": 1,
+				"rowSpan": 1,
 				"orientation": "x",
 				"buttonStyle": "ab-menu-default",
 				"menuAlignment": "ab-menu-right",
@@ -19622,8 +19623,10 @@
 					}]
 				}],
 				"menuTextLeft": "",
-				"height": 0
+				"height": 0,
+				"pages": []
 			},
+			"accessLevels": {},
 			"translations": [{
 				"language_code": "en",
 				"label": "Children.menu",
@@ -19637,16 +19640,54 @@
 				"menuTextRight": "",
 				"label": "[th]Children.menu"
 			}],
+			"viewIDs": [],
 			"position": {
 				"dx": 1,
 				"dy": 1,
 				"x": 0,
 				"y": 0
 			},
-			"isRoot": "false"
+			"isRoot": false
 		},
 		"createdAt": "2021-01-25T02:02:27.000Z",
-		"updatedAt": "2021-09-13T09:44:15.000Z"
+		"updatedAt": "2023-06-19T08:16:44.000Z"
+	}, {
+		"id": "48ab61fc-b011-4ab4-ba0a-e3c811e59c88",
+		"name": "Children.data-filter",
+		"type": "view",
+		"json": {
+			"id": "48ab61fc-b011-4ab4-ba0a-e3c811e59c88",
+			"type": "view",
+			"key": "data-filter",
+			"icon": "filter",
+			"name": "Children.data-filter",
+			"settings": {
+				"height": 0,
+				"columnSpan": 1,
+				"rowSpan": 1,
+				"name": "Children.data-filter",
+				"viewType": "advanced",
+				"dataviewID": "bdcfcb18-bc9e-4967-8898-f9939a7a8681",
+				"field": "",
+				"showFilter": 1,
+				"showSort": 1
+			},
+			"accessLevels": {},
+			"translations": [{
+				"language_code": "en",
+				"label": "Children.data-filter"
+			}],
+			"viewIDs": [],
+			"position": {
+				"dx": 1,
+				"dy": 1,
+				"x": 0,
+				"y": 1
+			},
+			"isRoot": false
+		},
+		"createdAt": "2023-06-19T08:15:53.000Z",
+		"updatedAt": "2023-06-19T08:16:44.000Z"
 	}, {
 		"id": "64be9a48-af74-4b86-9443-0ffc90595876",
 		"name": "Mentor",
